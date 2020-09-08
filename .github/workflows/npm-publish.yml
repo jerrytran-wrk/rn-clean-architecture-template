@@ -16,16 +16,16 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - name:  'Automated Version Bump'
-        uses:  'phips28/gh-action-bump-version@master'
-        with:
-          tag-prefix: ''
       - name: Install dependencies
         run: yarn
         working-directory: ./template
       - name: Run test on template
         run: yarn test
         working-directory: ./template
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        with:
+          tag-prefix: ''
       - name: Publish
         run: yarn publish
         env:
