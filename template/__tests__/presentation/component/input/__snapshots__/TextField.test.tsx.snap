@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test TextView render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": 16,
+        }
+      }
+    />
+    <TextInput
+      allowFontScaling={true}
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#4f4f4f",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F1F3F8",
+        "height": 1,
+        "marginTop": 8,
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;

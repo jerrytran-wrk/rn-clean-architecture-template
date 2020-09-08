@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFFFFF",
+      }
+    }
+    text="Oops!"
+  >
+    Oops!
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#4f4f4f",
+        "fontSize": 8,
+      }
+    }
+    text="Không có dữ liệu!"
+  >
+    Không có dữ liệu!
+  </Text>
+</View>
+`;
