@@ -5,11 +5,13 @@ import {
   CombineAuthenticationRepository,
 } from '@data';
 import {SignInUseCase} from '@domain';
-import {BearerAuthorizationRxAxiosProvider} from '@core';
+import {BearerAuthorizationRxAxiosProvider, BuildConfig} from '@core';
 
 export function registerDatDependencies() {
   container.register('ApiProvider', {
-    useValue: new BearerAuthorizationRxAxiosProvider({baseURL: ''}),
+    useValue: new BearerAuthorizationRxAxiosProvider({
+      baseURL: BuildConfig.ApiUrl,
+    }),
   });
   container.register('LocalAuthenticationDataSource', {
     useClass: KeyChainAuthenticationDataSource,
