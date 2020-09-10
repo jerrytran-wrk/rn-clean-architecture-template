@@ -4,15 +4,15 @@ import {BehaviorSubject} from 'rxjs';
 import {StoreContainer, RootStoreState} from './types';
 import {createReducerManager} from './reducer';
 import {createEpicManager} from './epic';
-import {authenticationReducer, authenticationEpic} from './authentication';
-import {configurationReducer, configurationEpic} from './configuration';
+import {configurationEpic, authenticationEpic} from './epics';
+import {configurationReducer, authenticationReducer} from './reducers';
 
 export function configureStore(): StoreContainer {
   const reducerManager = createReducerManager({
     authentication: authenticationReducer,
     configuration: configurationReducer,
   });
-  const {rootEpic, epicMiddleware} = createEpicManager(
+  const {rootEpic, epicMiddleware, epic$, addEpic} = createEpicManager(
     {},
     authenticationEpic,
     configurationEpic,
@@ -37,7 +37,8 @@ export function configureStore(): StoreContainer {
   return {
     reducerManager,
     store,
-    epic$: rootEpic,
+    epic$,
     action$,
+    addEpic,
   };
 }

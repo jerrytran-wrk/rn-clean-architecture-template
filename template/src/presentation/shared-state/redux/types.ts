@@ -1,9 +1,8 @@
 import {Reducer, Action, Store} from 'redux';
 import {Epic} from 'redux-observable';
 
-import {AuthenticationState} from './authentication';
+import {AuthenticationState, ConfigurationState} from './reducers';
 import {BehaviorSubject} from 'rxjs';
-import {ConfigurationState} from './configuration';
 
 export type RootStoreState = {
   authentication: AuthenticationState;
@@ -23,6 +22,7 @@ export type ReducerManger = {
 export type StoreContainer = {
   store: Store;
   reducerManager: ReducerManger;
-  epic$: RootEpic;
+  epic$: BehaviorSubject<Epic>;
   action$: BehaviorSubject<Action>;
+  addEpic: (epic: Epic) => void;
 };

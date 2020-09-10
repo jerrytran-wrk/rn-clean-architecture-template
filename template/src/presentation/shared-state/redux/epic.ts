@@ -15,6 +15,8 @@ export function createEpicManager(
   dependencies: RootEpicDependency = {},
   ...epics: Epic[]
 ): {
+  addEpic: (epic: Epic) => void;
+  epic$: BehaviorSubject<Epic>;
   rootEpic: RootEpic;
   epicMiddleware: EpicMiddleware<
     Action,
@@ -23,7 +25,15 @@ export function createEpicManager(
     RootEpicDependency
   >;
 } {
+  const addedEpics: Epic[] = [];
   const epic$ = new BehaviorSubject(combineEpics(...epics));
+  const addEpic = (epic: Epic) => {
+    if (addedEpics.includes(epic)) {
+      return;
+    }
+    addedEpics.push(epic);
+    epic$.next(epic);
+  };
   const rootEpic: Epic = (action$, state$) =>
     epic$.pipe(
       mergeMap((epic) =>
@@ -39,5 +49,5 @@ export function createEpicManager(
     RootStoreState,
     RootEpicDependency
   >();
-  return {rootEpic, epicMiddleware};
+  return {epic$, rootEpic, epicMiddleware, addEpic};
 }

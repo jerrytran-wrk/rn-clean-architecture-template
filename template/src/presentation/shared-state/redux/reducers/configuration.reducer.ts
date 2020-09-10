@@ -1,7 +1,12 @@
-import {ConfigurationState} from './type';
 import {createReducer} from '@reduxjs/toolkit';
-import {setTheme} from './action';
+
 import {ThemeConfig} from '@core';
+
+import {setTheme} from '../actions';
+
+export type ConfigurationState = {
+  themeConfig: ThemeConfig;
+};
 
 const INITIAL_STATE: ConfigurationState = {
   themeConfig: ThemeConfig.System,
