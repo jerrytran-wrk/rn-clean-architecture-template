@@ -57,6 +57,9 @@
         "src/di"
       ],
       // Presentation level alias
+      "@hocs": [
+        "src/presentation/hoc"
+      ],
       "@hooks": [
         "src/presentation/hook"
       ],
