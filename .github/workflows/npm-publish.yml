@@ -27,7 +27,6 @@ jobs:
         with:
           tag-prefix: ''
       - name: Publish
-        if: steps.check.outputs.changed == 'true'
         run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

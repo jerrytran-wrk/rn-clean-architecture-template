@@ -4,5 +4,6 @@
   "description": "React Native Template",
   "repository": "https://github.com/jerrytran-wrk/rn-clean-architecture-template",
   "author": "Jerry Tran <jerrytran.wrk@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
