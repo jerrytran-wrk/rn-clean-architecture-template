@@ -12,7 +12,12 @@ import React from 'react';
 
 import {Provider} from 'react-redux';
 
-import {registerDependencies, registerFlyValue, container} from '@di';
+import {
+  registerDependencies,
+  registerFlyValue,
+  container,
+  AppDependencies,
+} from '@di';
 import {RootNavigator} from '@presentation';
 import {StoreContainer} from '@shared-state';
 
@@ -20,7 +25,10 @@ registerDependencies();
 registerFlyValue();
 const App = () => {
   return (
-    <Provider store={container.resolve<StoreContainer>('StoreContainer').store}>
+    <Provider
+      store={
+        container.resolve<StoreContainer>(AppDependencies.StoreContainer).store
+      }>
       <RootNavigator />
     </Provider>
   );

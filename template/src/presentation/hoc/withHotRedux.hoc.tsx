@@ -3,6 +3,7 @@ import {Epic} from 'redux-observable';
 import {Reducer} from 'redux';
 import {StoreContainer} from '@shared-state';
 import {container} from 'tsyringe';
+import {AppDependencies} from '@di';
 
 export const withHotRedux = (
   reducerKey: string,
@@ -13,7 +14,7 @@ export const withHotRedux = (
     constructor(props: any) {
       super(props);
       const {reducerManager, addEpic} = container.resolve<StoreContainer>(
-        'StoreContainer',
+        AppDependencies.StoreContainer,
       );
       reducerManager.add(reducerKey, reducer);
       addEpic(epic);

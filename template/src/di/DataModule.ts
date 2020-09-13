@@ -6,26 +6,27 @@ import {
 } from '@data';
 import {SignInUseCase} from '@domain';
 import {BearerAuthorizationRxAxiosProvider, BuildConfig} from '@core';
+import {AppDependencies} from './type';
 
 export function registerDatDependencies() {
-  container.register('ApiProvider', {
+  container.register(AppDependencies.ApiProvider, {
     useValue: new BearerAuthorizationRxAxiosProvider({
       baseURL: BuildConfig.ApiUrl,
     }),
   });
-  container.register('LocalAuthenticationDataSource', {
+  container.register(AppDependencies.LocalAuthenticationDataSource, {
     useClass: KeyChainAuthenticationDataSource,
   });
 
-  container.register('RemoteAuthenticationDataSource', {
+  container.register(AppDependencies.RemoteAuthenticationDataSource, {
     useClass: ApiAuthenticationDataSource,
   });
 
-  container.register('AuthenticationRepository', {
+  container.register(AppDependencies.AuthenticationRepository, {
     useClass: CombineAuthenticationRepository,
   });
 
-  container.register('SignInUseCase', {
+  container.register(AppDependencies.SignInUseCase, {
     useClass: SignInUseCase,
   });
 }

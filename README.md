@@ -28,7 +28,7 @@
 - Type guide for React Native project
 - React Native config
 - Asset Icon Generator script
-- Dependency injection with [tsyringe][https://github.com/microsoft/tsyringe]
+- Dependency injection with [tsyringe](https://github.com/microsoft/tsyringe)
 
 ## :star: ToDos
 - Resource values - Such as: Component dimension, Text Theme ...

@@ -4,6 +4,7 @@ import {container} from 'tsyringe';
 import {filter} from 'rxjs/operators';
 import {useSelector, useDispatch} from 'react-redux';
 
+import {AppDependencies} from '@di';
 import {signIn, StoreContainer, signInFailed} from '@shared-state';
 
 import {signInSelector} from './SignIn.redux-selector';
@@ -14,7 +15,9 @@ export function useSignIn(handle: SignInHandle) {
   const {isAuthenticating} = useSelector(signInSelector);
   const dispatch = useDispatch();
   const submit = () => dispatch(signIn({username: 'test'}));
-  const {action$} = container.resolve<StoreContainer>('StoreContainer');
+  const {action$} = container.resolve<StoreContainer>(
+    AppDependencies.StoreContainer,
+  );
   React.useEffect(() => {
     const subscription = action$
       .pipe(filter(signInFailed.match))

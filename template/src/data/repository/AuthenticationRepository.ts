@@ -2,6 +2,7 @@ import {inject, injectable} from 'tsyringe';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
+import {AppDependencies} from '@di';
 import {AuthenticationRepository, SignInResult} from '@domain';
 
 import {
@@ -13,9 +14,9 @@ import {
 export class CombineAuthenticationRepository
   implements AuthenticationRepository {
   constructor(
-    @inject('LocalAuthenticationDataSource')
+    @inject(AppDependencies.LocalAuthenticationDataSource)
     private readonly localDataSource: LocalAuthenticationDataSource,
-    @inject('RemoteAuthenticationDataSource')
+    @inject(AppDependencies.RemoteAuthenticationDataSource)
     private readonly remoteDataSource: RemoteAuthenticationDataSource,
   ) {}
 
