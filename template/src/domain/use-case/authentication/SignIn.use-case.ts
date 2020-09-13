@@ -2,7 +2,6 @@ import {inject, injectable} from 'tsyringe';
 import {Observable} from 'rxjs';
 import {map, mergeMap, mapTo} from 'rxjs/operators';
 
-import {AppDependencies} from '@di';
 import {UseCase} from '@core';
 
 import {AuthenticationRepository} from '../../repository';
@@ -11,7 +10,7 @@ import {SignInResult} from '../../entity';
 @injectable()
 export class SignInUseCase implements UseCase<SignInResult, any> {
   constructor(
-    @inject(AppDependencies.AuthenticationRepository)
+    @inject('AuthenticationRepository')
     private readonly authenticationRepository: AuthenticationRepository,
   ) {}
 
