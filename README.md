@@ -21,9 +21,10 @@
 
 - Elegant usage directly within the [React Native CLI](https://github.com/react-native-community/cli)
 - Consistent with the default React Native typescript template
-- Clean architect implementation
+- Clean architecture implementation
 - Reactive implementation
-- Redux + Redux-Observable by default
+- Redux + [Redux-Observable](https://redux-observable.js.org/) by default
+- Blueprint template for module uses redux observable or [React-sweet-state](https://github.com/atlassian/react-sweet-state) 
 - React Navigation by default
 - Type guide for React Native project
 - React Native config
@@ -34,6 +35,9 @@
 - Resource values - Such as: Component dimension, Text Theme ...
 - Fastlane template
 - Lean code ...
+
+## :star: Example
+- Demo implementation for this template [Example](https://github.com/tiennm16/Example)
 
 ## :arrow_forward: Usage
 
