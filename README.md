@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> React Native clean architect for quick start with React Native
+> React Native clean architecture for quick start with React Native
 
 ## :star: Features
 
@@ -28,6 +28,12 @@
 - Type guide for React Native project
 - React Native config
 - Asset Icon Generator script
+- Dependency injection with [tsyringe][https://github.com/microsoft/tsyringe]
+
+## :star: ToDos
+- Resource values - Such as: Component dimension, Text Theme ...
+- Fastlane template
+- Lean code ...
 
 ## :arrow_forward: Usage
 
