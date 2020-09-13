@@ -14,7 +14,7 @@ import {
   signInLocally,
   signInLocallyFailed,
   signInLocallySuccess,
-} from './action';
+} from '../actions';
 
 import {SignInUseCase} from '@domain';
 

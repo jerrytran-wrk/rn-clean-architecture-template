@@ -1,4 +1,3 @@
-import {AuthenticationState} from './type';
 import {createReducer} from '@reduxjs/toolkit';
 import {
   signInSuccess,
@@ -7,7 +6,13 @@ import {
   signInLocally,
   signInLocallySuccess,
   signInLocallyFailed,
-} from './action';
+} from '../actions';
+
+export type AuthenticationState = {
+  isAuthorized: boolean;
+  isAuthenticating: boolean;
+  isAuthenticatingLocally: boolean;
+};
 
 const INITIAL_STATE: AuthenticationState = {
   isAuthenticating: false,

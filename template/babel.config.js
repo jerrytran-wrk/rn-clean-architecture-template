@@ -15,6 +15,7 @@ module.exports = {
           '@data': './src/data',
           '@di': './src/di',
           // Presentation level alias
+          '@hocs': './src/presentation/hoc',
           '@hooks': './src/presentation/hook',
           '@components': './src/presentation/component',
           '@containers': './src/presentation/container',

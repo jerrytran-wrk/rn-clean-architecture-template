@@ -23,10 +23,11 @@
 - Consistent with the default React Native typescript template
 - Clean architect implementation
 - Reactive implementation
-- Redux + Redux-Observable buy default
+- Redux + Redux-Observable by default
 - React Navigation by default
 - Type guide for React Native project
-- ...
+- React Native config
+- Asset Icon Generator script
 
 ## :arrow_forward: Usage
 
