@@ -1,3 +1,14 @@
+/**
+ * @description Script to generate asset icon with require function
+ * @param urls: array of asset folder need to be indexing with generated asset
+ * 
+ * Usage
+ *  node asset-icon-generator.script.js ../asset/icons ../asset/images
+ * 
+ * Output: icon-facebook.png => export const ICON_FACEBOOK = require('./icon-facebook.png');
+ */
+
+
 const fs = require('fs');
 const path = require('path');
 const dirname = path.dirname(__dirname);
