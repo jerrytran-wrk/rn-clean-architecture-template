@@ -2,7 +2,7 @@ import React from 'react';
 import {} from 'react-native';
 
 import {useDispatch, useSelector, Selector} from 'react-redux';
-import { {{name}}Slice, INITIAL_STATE} from './{{name}}.slice';
+import { {{camelCase name}}Slice, INITIAL_STATE} from './{{name}}.slice';
 import { {{name}}ReduxSelectionState, StoreStateWith{{name}} } from './types';
 
 export const {{camelCase name}}Selector: Selector<
@@ -12,7 +12,7 @@ export const {{camelCase name}}Selector: Selector<
 
 const {
   actions: {},
-} = {{name}}Slice;
+} = {{camelCase name}}Slice;
 
 export function use{{name}}Model() {
   const {} = useSelector<

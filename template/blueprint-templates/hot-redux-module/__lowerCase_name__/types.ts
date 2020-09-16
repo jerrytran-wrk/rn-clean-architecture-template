@@ -9,10 +9,10 @@ export type {{name}}NavigationProps = StackNavigationProp<
   '{{name}}'
 >;
 
-export type  {{name}}RouteProp = RouteProp<ParamsType, ' {{name}}'>;
+export type {{name}}RouteProp = RouteProp<ParamsType, ' {{name}}'>;
 
-export type  {{name}}Props = {
-  navigation: {{name}}NavigationProps;
+export type {{name}}Props = {
+  navigation:  {{name}}NavigationProps;
   route:  {{name}}RouteProp;
 };
 
