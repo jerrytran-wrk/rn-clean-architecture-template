@@ -12,11 +12,9 @@ export type {{name}}NavigationProps = StackNavigationProp<
 export type {{name}}RouteProp = RouteProp<ParamsType, ' {{name}}'>;
 
 export type {{name}}Props = {
-  navigation:  {{name}}NavigationProps;
-  route:  {{name}}RouteProp;
+  navigation: {{name}}NavigationProps;
+  route: {{name}}RouteProp;
 };
-
-
 
 export type {{name}}State = {
 

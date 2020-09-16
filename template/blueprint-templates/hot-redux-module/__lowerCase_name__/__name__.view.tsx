@@ -16,7 +16,6 @@ const _{{name}}: React.FC< {{name}}Props> = (props) => {
   const {} = props;
   const {} = use{{name}}Model();
  
-
   return (
     <SafeAreaView style={[styles.container]}>
       <TextView/>

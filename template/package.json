@@ -29,6 +29,7 @@
     "react-native-screens": "^2.10.1",
     "react-native-skeleton-placeholder": "^2.0.7",
     "react-redux": "^7.2.1",
+    "react-sweet-state": "^2.3.1",
     "redux": "^4.0.5",
     "redux-observable": "^1.2.0",
     "reflect-metadata": "^0.1.13",

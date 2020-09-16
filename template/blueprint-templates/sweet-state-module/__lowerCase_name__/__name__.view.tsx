@@ -7,7 +7,7 @@ import {ErrorBoundary, TextView} from '@components';
 // importing from local file
 import {use{{$name}}, {{$name}}StoreContainer} from './{{$name}}.store';
 import { {{$name}}Props } from './{{$name}}.type';
-import { {{$name}}Styles } from './{{$name}}.style';
+import {styles} from './{{$name}}.style';
 
 export const {{$name}}View: React.FC<{{$name}}Props> = (props) => {
   const [state, action] = use{{$name}}();
