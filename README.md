@@ -16,8 +16,8 @@
 </p>
 
 > React Native clean architecture for quick start with React Native
-![Architecture](https://miro.medium.com/max/556/0*zUtZYiJ1bDTugOYY)
-
+![Architecture illustrate](https://miro.medium.com/max/556/0*zUtZYiJ1bDTugOYY)
+**This project follow the diagram of [ResoCoderflutter-tdd-clean-architecture-course](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course)
 ## :star: Features
 
 - Elegant usage directly within the [React Native CLI](https://github.com/react-native-community/cli)
@@ -56,6 +56,17 @@ There seems to be quite some confusion about the legacy CLI. This template only 
 
 Further information can be found here: https://github.com/react-native-community/cli#about
 
+# Source component usage
+
+* **Blueprint template**: generate files with available template in folder: blueprint-template
+    * Require: Blueprint template plugin's installed in VSC 
+    * Usage: **New file with template and choose the one you want to create**
+    * Available template:
+        * Hot redux module: Create new module with new reducer, action, epic to handle the module's own logic
+        * React sweet state: Create new module with react sweet state integration by default
+* **Asset Generator script**: Generate index file for asset folder
+    * Rule: icon-facebook.png => export const ICON_FACEBOOK = require('icon-facebook.png');
+    * Usage: node <script_name> <folder paths need to index, separate with space>
 ## :computer: Contributing
 
 Contributions are very welcome. Please check out the [contributing document](CONTRIBUTING.md).

@@ -2,14 +2,13 @@ import React from 'react';
 
 import {createContainer} from 'react-sweet-state';
 
-import { {{$name}}Actions} from './{{$name}}.action';
 import {
   {{$name}}StoreState,
   {{$name}}ContainerInitialState,
   {{$name}}Props,
 } from './{{$name}}.type';
 
-import { {{$name}}Store} from './{{$name}}.store';
+import { {{$name}}Store, {{$name}}Actions} from './{{$name}}.store';
 import { {{$name}}View} from './{{$name}}.view';
 
 export const {{$name}}StoreContainer = createContainer<
