@@ -1,6 +1,6 @@
 {
   "name": "rn-clean-architecture-template",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React Native Template",
   "repository": "https://github.com/jerrytran-wrk/rn-clean-architecture-template",
   "author": "Jerry Tran <jerrytran.wrk@gmail.com>",
