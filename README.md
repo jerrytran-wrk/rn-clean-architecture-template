@@ -17,6 +17,7 @@
 
 > React Native clean architecture for quick start with React Native
 ![Architecture illustrate](https://miro.medium.com/max/556/0*zUtZYiJ1bDTugOYY)
+
 **This project follow the diagram of [ResoCoderflutter-tdd-clean-architecture-course](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course)
 ## :star: Features
 
@@ -48,7 +49,15 @@ npx react-native init MyApp --template rn-clean-architecture-template
 
 ### Usage with older versions of React Native
 
-This project supports only version 0.62.3 currently.
+See the below table to find out which version of the template to use.
+
+#### React Native <=> Template Version
+
+| React Native  	| Template  	|
+|---	            |---	        |
+| 0.63.3  	        | 0.2.*       |
+| 0.63.2  	        | 0.1.*       |
+
 
 ### Note on the legacy CLI
 
