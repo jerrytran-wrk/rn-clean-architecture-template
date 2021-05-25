@@ -6,7 +6,11 @@ platform :ios, '10.0'
 target 'RNCleanArchitectTemplate' do
   config = use_native_modules!
 
-  use_react_native!(:path => config["reactNativePath"])
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => true
+  )
 
   target 'RNCleanArchitectTemplateTests' do
     inherit! :complete
@@ -20,14 +24,5 @@ target 'RNCleanArchitectTemplate' do
   use_flipper!
   post_install do |installer|
     flipper_post_install(installer)
-  end
-end
-
-target 'RNCleanArchitectTemplate-tvOS' do
-  # Pods for RNCleanArchitectTemplate-tvOS
-
-  target 'RNCleanArchitectTemplate-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 end

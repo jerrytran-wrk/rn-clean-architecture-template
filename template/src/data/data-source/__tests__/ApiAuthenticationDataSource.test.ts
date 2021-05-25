@@ -10,7 +10,7 @@ describe('ApiAuthenticationDataSource', () => {
     provider = new MockBearerAuthorizationRxAxiosProvider({});
     dataSource = new ApiAuthenticationDataSource(provider);
   });
-  it('sign in successfully', async (done) => {
+  it('sign in successfully', (done) => {
     provider.overrideFunctions = ['request'];
     provider.mockResult = of({
       data: {data: {token: 'test'}},
@@ -24,7 +24,7 @@ describe('ApiAuthenticationDataSource', () => {
       complete: done,
     });
   });
-  it('sign in failed', async (done) => {
+  it('sign in failed', (done) => {
     provider.overrideFunctions = ['request'];
     provider.mockResult = throwError(
       new RxAxiosProviderException(JSON.parse('{}')),
